@@ -1,0 +1,31 @@
+<div>
+<p>heroes works!</p>
+<ul>
+	<li>{{name}} , {{age}}</li>
+</ul>
+<!--
+<ul *ngFor="let heroe of heroes | keyvalue">
+	<li> {{heroe.key}} ;  {{heroe.value[0]}}</li>
+	<li>{{heroe | json}}</li> 
+</ul>
+
+colspan="1"/ number of row taken
+-->
+
+<table class="table table-bordered">
+    <thead>
+        <tr class="table-dark">
+          	<th class="col-md-1" scope="col" >#</th>
+            <th scope="col">Id </th>
+          	<th scope="col">Name</th>
+          	<th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let heroe of heroes | keyvalue">
+        <tr>
+			<th scope="row" class="table-success">{{heroe.key}}</th>  <!--<td>{{heroe.key}}</td>-->
+			<td *ngFor="let v of heroe.value">{{v}}</td>
+        </tr>
+    </tbody>
+</table> 
+</div>

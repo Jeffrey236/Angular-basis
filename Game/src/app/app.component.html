@@ -1,0 +1,23 @@
+<div>
+  <h1>My Heroes</h1>
+  <h5>Angular Router</h5>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm-6 d-flex justify-content-center">
+            <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <router-outlet></router-outlet> <!-- The directive (<router-outlet>) that marks where the router displays a view component. -->
+  </div>
+
+</div>
